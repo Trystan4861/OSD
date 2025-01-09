@@ -66,14 +66,24 @@ El archivo `config.ini` se genera automáticamente al ejecutar el script por pri
 ```ini
 [OSD]
 font = Arial
-color = white
+color = rgba(255, 255, 255, 255)
+background = rgba(0, 0, 0, 128)
 size = 24
 align = center
 v_align = center
 v_padding = 10
 h_padding = 50
 ```
-
+```
+font = FontName de la fuente a usar, Arial, Calibri, Tahoma, Lucide Sans, etc
+color = rgba(), nombre de color como red, white, black, etc
+backgrond = rgba(), nombre de color como red, white, black, etc
+size = Tamaño de la fuente en puntos
+align = left, center, right
+v_align = top, center, bottom
+v_padding = Padding vertical en pixeles (referido al espacio entre el OSD y el borde de la pantalla en los modos align top y bottom)
+h_padding = Padding horizontal en pixeles (referido al espacio entre el OSD y el borde de la pantalla en los modos align left y right)
+```
 ---
 
 ## Compilación a ejecutable
