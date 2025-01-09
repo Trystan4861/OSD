@@ -76,8 +76,8 @@ h_padding = 50
 ```
 ```
 font = FontName de la fuente a usar, Arial, Calibri, Tahoma, Lucide Sans, etc
-color = rgba(), nombre de color como red, white, black, etc
-backgrond = rgba(), nombre de color como red, white, black, etc
+color = rgba(), nombre de color como red, white, black, etc.
+backgrond = rgba(), nombre de color como red, white, black, etc.
 size = Tamaño de la fuente en puntos
 align = left, center, right
 v_align = top, center, bottom
