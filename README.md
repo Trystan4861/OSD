@@ -142,4 +142,4 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para má
 
 ## Capturas de pantalla
 
-*(Agrega capturas de pantalla aquí si lo deseas para ilustrar el proyecto)*
+<img src="https://raw.githubusercontent.com/Trystan4861/OSD/refs/heads/main/screenshot.jpg" />
