@@ -129,8 +129,7 @@ Si el ejecutable es detectado como un virus:
 
 ## Créditos
 
-- Autor: **@trystan4861**
-- Versión: 1.0
+- Autor: [**@trystan4861**](https://github.com/Trystan4861)
 
 ---
 
