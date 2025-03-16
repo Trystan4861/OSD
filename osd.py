@@ -149,7 +149,7 @@ def ensure_config_file():
     else:
         # Si es script Python
         script_dir = os.path.dirname(os.path.abspath(__file__))
-    
+
     config_file = os.path.join(script_dir, "config.ini")
     config = configparser.ConfigParser(allow_no_value=True)  # Permitir comentarios sin valor
     config_error = False
@@ -167,17 +167,17 @@ def ensure_config_file():
 
         # Agregar comentarios explicativos
         config.set("OSD", "; Configuración de la fuente")
-        config.set("OSD", "; font: Nombre de la fuente (ej: Arial, Times New Roman, Alone in the Dark)")
-        config.set("OSD", "font", "Arial")
+        config.set("OSD", "; font: Nombre de la fuente (ej: DejaVu Sans Mono, Arial, Times New Roman, etc.)")
+        config.set("OSD", "font", "DejaVu Sans Mono")
 
         config.set("OSD", "\n; Colores en formato rgba(red, green, blue, alpha)")
         config.set("OSD", "; font_color: Color del texto")
-        config.set("OSD", "font_color", "rgba(255, 255, 255, 255)")
+        config.set("OSD", "font_color", "rgba(0, 255, 0, 255)")
         config.set("OSD", "; background_color: Color del fondo")
         config.set("OSD", "background_color", "rgba(0, 0, 0, 128)")
 
         config.set("OSD", "\n; Tamaño de la fuente en píxeles")
-        config.set("OSD", "size", "24")
+        config.set("OSD", "size", "32")
 
         config.set("OSD", "\n; Alineación horizontal del texto")
         config.set("OSD", "; align: Valores posibles: left, center, right")
