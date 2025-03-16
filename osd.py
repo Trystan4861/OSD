@@ -192,6 +192,7 @@ def ensure_config_file():
 
     config.read(config_file, encoding="utf-8")
 
+    updated = False
     # Verificar valores faltantes o inválidos y corregirlos
     for key, value in default_config.items():
         if key not in config["OSD"] or not config["OSD"][key].strip():
