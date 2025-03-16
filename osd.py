@@ -142,8 +142,14 @@ def ensure_config_file():
     """Crea el archivo config.ini con valores predeterminados si no existe.
     Devuelve un objeto ConfigParser cargado.
     """
-    # Obtener la ruta del script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Obtener la ruta del ejecutable (funciona tanto con script como con exe)
+    if getattr(sys, 'frozen', False):
+        # Si está compilado (exe)
+        script_dir = os.path.dirname(sys.executable)
+    else:
+        # Si es script Python
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+    
     config_file = os.path.join(script_dir, "config.ini")
     config = configparser.ConfigParser(allow_no_value=True)  # Permitir comentarios sin valor
     config_error = False
@@ -156,7 +162,7 @@ def ensure_config_file():
             config_error = True
 
     if config_error: # si hubo error en el archivo de configuración lo regeneramos
-        print(f"Archivo config.ini creado con valores predeterminados en {config_file}")
+        print(f"Archivo config.ini creado con valores predeterminados en: {config_file}")
         config["OSD"] = {}
 
         # Agregar comentarios explicativos
